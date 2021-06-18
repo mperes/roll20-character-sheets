@@ -258,8 +258,8 @@
                     </div>
                 </div>
                 <div class="choice row race_possible custom_race custom_subrace">
-                    <label><span data-i18n="innate-spellcasting:">Innate Spellcasting:</span>
-                        <label><span data-i18n="spellcasting-ability">Spellcasting Ability:</span>
+                    <label><span data-i18n="Innate Powers:">Innate Spellcasting:</span>
+                        <label><span data-i18n="spellcasting-ability">Esper Ability:</span>
                             <select name="comp_custom_race_spell_ability">
                                 <option value="" data-i18n="choose">Choose</option>
                                 <option value="Strength" data-i18n="strength">Strength</option>
@@ -270,10 +270,10 @@
                                 <option value="Charisma" data-i18n="charisma">Charisma</option>
                             </select>
                         </label>
-                        <label class="hilite choice custom_spellcasting"><span data-i18n="number-of-primes">Number of Cantrips:</span>
+                        <label class="hilite choice custom_spellcasting"><span data-i18n="number-of-primes">Number of Prime Powers:</span>
                             <input type="number" name="comp_custom_race_spell_number" min="1" value="1" required>
                         </label>
-                        <label class="hilite choice custom_spellcasting"><span data-i18n="spell-list">Spell List:</span>
+                        <label class="hilite choice custom_spellcasting"><span data-i18n="spell-list">Power List:</span>
                             <select name="comp_custom_race_spell_list" required>
                                 <option value="" data-i18n="choose">Choose</option>
                             </select>
@@ -367,7 +367,7 @@
                         <div class="subclass_holder holder"></div>
                     </div>
                     <div class="choice row custom_class custom_class_spells">
-                        <label><span data-i18n="spellcasting-ability">Spellcasting Ability:</span>
+                        <label><span data-i18n="spellcasting-ability">Esper Ability:</span>
                             <select name="comp_custom_class_spell_ability">
                                 <option value="" data-i18n="choose">Choose</option>
                                 <option value="Strength" data-i18n="strength">Strength</option>
@@ -378,20 +378,20 @@
                                 <option value="Charisma" data-i18n="charisma">Charisma</option>
                             </select>
                         </label>
-                        <label class="hilite choice custom_spellcasting"><span data-i18n="number-of-primes">Number of Cantrips:</span>
+                        <label class="hilite choice custom_spellcasting"><span data-i18n="number-of-primes">Number of Prime Powers:</span>
                             <input type="number" name="comp_custom_class_cantrip_number" min="0" value="1" required>
                         </label>
-                        <label class="hilite choice custom_spellcasting"><span data-i18n="number-of-lvl-1-spells">Number of Level 1 Spells:</span>
+                        <label class="hilite choice custom_spellcasting"><span data-i18n="number-of-lvl-1-spells">Number of Rank 1 Powers:</span>
                             <input type="number" name="comp_custom_class_spell_number" min="0" value="1" required>
                         </label>
-                        <label class="hilite choice custom_spellcasting"><span data-i18n="spell-list">Spell List:</span>
+                        <label class="hilite choice custom_spellcasting"><span data-i18n="spell-list">Power List:</span>
                             <select name="comp_custom_class_spell_list" required>
                                 <option value="" data-i18n="choose">Choose</option>
                             </select>
                         </label>
                     </div>
                     <div class="choice row custom_additional_spells custom_subclass">
-                        <label><span data-i18n="charmancer-additional-primes">Additional Cantrips</span>:
+                        <label><span data-i18n="charmancer-additional-primes">Additional Prime Powers</span>:
                             <input type="number" name="comp_custom_subclass_cantrip_number" min="0" value="0" required>
                             <label class="choice custom_cantrip_list"><span data-i18n="prime-power-list-if-diff">Prime Power List (if different from default class list)</span>:
                                 <select name="comp_custom_subclass_cantrip_list">
@@ -399,7 +399,7 @@
                                 </select>
                             </label>
                         </label>
-                        <label><span data-i18n="charmancer-additional-lvl-1-spells">Additional Level 1 Spells</span>:
+                        <label><span data-i18n="charmancer-additional-lvl-1-spells">Additional Rank 1 Powers</span>:
                             <input type="number" name="comp_custom_subclass_spell_number" min="0" value="0" required>
                             <label class="choice custom_spell_list"><span data-i18n="power-list-if-diff">Power List (if different from default class list)</span>:
                                 <select name="comp_custom_subclass_spell_list">
@@ -1187,12 +1187,12 @@
                 </div>
             </div>
             <div class="summary">
-                <p class="label" data-i18n="spells">Spells</p>
+                <p class="label" data-i18n="spells">Powers</p>
                 <div class="spell_info">
                 </div>
                 <div class="choice returnblock spells_button">
                     <span data-i18n="return-to:">Return to: </span>
-                    <button class="step" type="back" value="l1-spells" data-i18n="spells-u">SPELLS</button>
+                    <button class="step" type="back" value="l1-spells" data-i18n="spells-u">POWERS</button>
                 </div>
             </div>
             <div class="summary">
