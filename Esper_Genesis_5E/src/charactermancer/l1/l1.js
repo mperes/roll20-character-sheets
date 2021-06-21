@@ -2030,13 +2030,13 @@
                 showList.push("custom_class_gold", "gold_option", "eqp_custom_class");
             } else {
                 handleChoices("class");
-                const startingGold = data["l1-class"].data.class && data["l1-class"].data.class["Starting Gold"] ? data["l1-class"].data.class["Starting Gold"] : false;
+                const startingGold = data["l1-class"].data.class && data["l1-class"].data.class["Starting Cubil"] ? data["l1-class"].data.class["Starting Cubil"] : false;
                 if (startingGold) {
                     update["starting_gold_btn_label"] = startingGold;
-                    update_attr["roll_starting_gold"] = `@{wtype}&{template:mancerroll} {{title=Starting Gold}} {{r1=[[${startingGold.replace("x", "*")}]]}}`;
+                    update_attr["roll_starting_gold"] = `@{wtype}&{template:mancerroll} {{title=Starting Cubil}} {{r1=[[${startingGold.replace("x", "*")}]]}}`;
                     showList.push("random_gold_option");
                 } else {
-                    update_attr["roll_starting_gold"] = "@{wtype}&{template:mancerroll} {{title=Starting Gold}} {{r1=[[0]]}}";
+                    update_attr["roll_starting_gold"] = "@{wtype}&{template:mancerroll} {{title=Starting Cubil}} {{r1=[[0]]}}";
                     update_attr["equipment_type"] = "class";
                     equipmentType = "class";
                     hideList.push("equipment_type", "gold_option");
@@ -2071,8 +2071,8 @@
             }
 
             try {
-                if (data['l1-background'] && data['l1-background'].data && data['l1-background'].data.background['data-Starting Gold']) {
-                    update_attr["background_starting_gold"] = data['l1-background'].data.background['data-Starting Gold'] || 0
+                if (data['l1-background'] && data['l1-background'].data && data['l1-background'].data.background['data-Starting Cubil']) {
+                    update_attr["background_starting_gold"] = data['l1-background'].data.background['data-Starting Cubil'] || 0
                 }
             } catch (error) {
                 errorMessage('l1-background', error)
@@ -3336,8 +3336,8 @@
                     if(!page.id) page.data.Source = "Charactermancer";
                     page.name = page.name.replace(/@@!!@@/g,""); // Hacky bugfix to prevent custom names from matching unavailable content
                     nextGet = nextGet.concat(getOtherDrops(page.data));
-                    if(page.data["data-Starting Gold"] && !noEquipmentDrop) {
-                        set["gp"] += parseInt(page.data["data-Starting Gold"]);
+                    if(page.data["data-Starting Cubil"] && !noEquipmentDrop) {
+                        set["gp"] += parseInt(page.data["data-Starting Cubil"]);
                     }
                     allPageData.push(page);
                 });

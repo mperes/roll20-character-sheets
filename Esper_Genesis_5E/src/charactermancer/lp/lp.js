@@ -2596,8 +2596,8 @@
                     if(!page.id) page.data.Source = "Charactermancer";
                     page.name = page.name.replace(/@@!!@@/g,""); // Hacky bugfix to prevent custom names from matching unavailable content
                     nextGet = nextGet.concat(getOtherDrops(page.data));
-                    if(page.data["data-Starting Gold"] && !noEquipmentDrop) {
-                        set["gp"] += parseInt(page.data["data-Starting Gold"]);
+                    if(page.data["data-Starting Cubil"] && !noEquipmentDrop) {
+                        set["gp"] += parseInt(page.data["data-Starting Cubil"]);
                     }
                     allPageData.push(page);
                 });

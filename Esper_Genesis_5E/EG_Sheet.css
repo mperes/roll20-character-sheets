@@ -4789,6 +4789,19 @@ span.sheet-spellritual, span.sheet-spellconcentration {
   width: 100%;
 }
 
+.sheet-charmancer .sheet-spell_holder > .sheet-row {
+  padding-bottom: 15px;
+}
+
+.sheet-charmancer .sheet-spell_holder > .sheet-row:not(:first-child) {
+  margin-top: -5px;
+}
+
+.sheet-charmancer .sheet-spell_holder > .sheet-row:last-child {
+  border-width: 1px 4px 1px 1px;
+  border-radius: 0.5em 0 0.5em 0;
+}
+
 /* Firefox 3.5+ */
 body:not(:-moz-handler-blocked) .sheet-charmancer .sheet-steps {
   top: -0.8em;
