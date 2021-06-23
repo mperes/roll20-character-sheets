@@ -819,6 +819,56 @@ span(data-i18n='starship-u') STARSHIP
         span.label(data-i18n='spell-atk-bonus-u') POWER ATTACK BONUS
   input.spellicon_flag(type='hidden' name='attr_spellicon_flag' value!='all')
   .body
+    .spell-meta
+      .spell-meta-tp
+        .tp(style='margin-top: 10px;')
+          .top
+            span(data-i18n='tp-max-u') Talent Point Maximum
+            input(type='text' name='attr_tp_max' title='@{tp_max}')
+          input(type='number' name='attr_tp' title='@{tp}')
+          span.label(data-i18n='tp-current-u' style='margin-top: 5px;') TALENT POINTS REMAINING
+      .spell-meta-slots
+      .spell-meta-mastery
+        .tp-slots
+            span.label(data-i18n='talent-slots-label' style='margin-bottom: 3px; margin-top: 10px;') TALENT SLOTS (Cybermancer)
+            .hdice-dsaves-container(style='width: 242px;')
+              .subcontainer
+                .top
+                  span(data-i18n='max-rank-u') Rank
+                  input(type='text' name='attr_slot_rank_max' title='@{slot_rank_max}')
+                input(type='number' name='attr_slots_max' title='@{talent_slots}' style='margin-bottom: -6px;')
+                span.label(data-i18n='talent-slots-u' style='margin-top: 6px;') Max Talent Slots
+              .subcontainer
+                .speed
+                  input(type='number' name='attr_slots_used' title='@{slots_used}' style='margin-top: 20px;')
+                  span.label(data-i18n='used-talent-slots' style='margin-top: 2px;') Slots Remaining
+        .class_options.esper-mastery(style='margin-top: 10px;')
+          .column
+            span.em_blank &nbsp;
+            span(data-i18n='em_available') Gained?
+            span(data-i18n='em_used') Used
+          .column
+            span(data='em_rank') 6th
+            .sub-button
+              input(type='checkbox' name='attr_mastery_6th' value!='1')
+            input(type='checkbox' name='attr_mastery_6th_used' value!='1')
+          .column
+            span(data='em_rank') 7th
+            .sub-button
+              input(type='checkbox' name='attr_mastery_7th' value!='1')
+            input(type='checkbox' name='attr_mastery_7th_used' value!='1')
+          .column
+            span(data='em_rank') 8th
+            .sub-button
+              input(type='checkbox' name='attr_mastery_8th' value!='1')
+            input(type='checkbox' name='attr_mastery_8th_used' value!='1')
+          .column
+            span(data='em_rank') 9th
+            .sub-button
+              input(type='checkbox' name='attr_mastery_9th' value!='1')
+            input(type='checkbox' name='attr_mastery_9th_used' value!='1')
+          span.label(style='margin-top: 8px; margin-bottom: -3px;' data-i18n='esper-mastery-u') ESPER MASTERY
+    
     .col.col2
       .tp(style='margin-top: 10px;')
         .top

@@ -1709,6 +1709,61 @@
         </div>
         <input class="spellicon_flag" type="hidden" name="attr_spellicon_flag" value="all"/>
         <div class="body">
+          <div class="spell-meta">
+            <div class="spell-meta-tp">
+              <div class="tp" style="margin-top: 10px;">
+                <div class="top"><span data-i18n="tp-max-u">Talent Point Maximum</span>
+                  <input type="text" name="attr_tp_max" title="@{tp_max}"/>
+                </div>
+                <input type="number" name="attr_tp" title="@{tp}"/><span class="label" data-i18n="tp-current-u" style="margin-top: 5px;">TALENT POINTS REMAINING</span>
+              </div>
+            </div>
+            <div class="spell-meta-slots"></div>
+            <div class="spell-meta-mastery">
+              <div class="tp-slots"><span class="label" data-i18n="talent-slots-label" style="margin-bottom: 3px; margin-top: 10px;">TALENT SLOTS (Cybermancer)</span>
+                <div class="hdice-dsaves-container" style="width: 242px;">
+                  <div class="subcontainer">
+                    <div class="top"><span data-i18n="max-rank-u">Rank</span>
+                      <input type="text" name="attr_slot_rank_max" title="@{slot_rank_max}"/>
+                    </div>
+                    <input type="number" name="attr_slots_max" title="@{talent_slots}" style="margin-bottom: -6px;"/><span class="label" data-i18n="talent-slots-u" style="margin-top: 6px;">Max Talent Slots</span>
+                  </div>
+                  <div class="subcontainer">
+                    <div class="speed">
+                      <input type="number" name="attr_slots_used" title="@{slots_used}" style="margin-top: 20px;"/><span class="label" data-i18n="used-talent-slots" style="margin-top: 2px;">Slots Remaining</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="class_options esper-mastery" style="margin-top: 10px;">
+                <div class="column"><span class="em_blank">&nbsp;</span><span data-i18n="em_available">Gained?</span><span data-i18n="em_used">Used</span></div>
+                <div class="column"><span data="em_rank">6th</span>
+                  <div class="sub-button">
+                    <input type="checkbox" name="attr_mastery_6th" value="1"/>
+                  </div>
+                  <input type="checkbox" name="attr_mastery_6th_used" value="1"/>
+                </div>
+                <div class="column"><span data="em_rank">7th</span>
+                  <div class="sub-button">
+                    <input type="checkbox" name="attr_mastery_7th" value="1"/>
+                  </div>
+                  <input type="checkbox" name="attr_mastery_7th_used" value="1"/>
+                </div>
+                <div class="column"><span data="em_rank">8th</span>
+                  <div class="sub-button">
+                    <input type="checkbox" name="attr_mastery_8th" value="1"/>
+                  </div>
+                  <input type="checkbox" name="attr_mastery_8th_used" value="1"/>
+                </div>
+                <div class="column"><span data="em_rank">9th</span>
+                  <div class="sub-button">
+                    <input type="checkbox" name="attr_mastery_9th" value="1"/>
+                  </div>
+                  <input type="checkbox" name="attr_mastery_9th_used" value="1"/>
+                </div><span class="label" style="margin-top: 8px; margin-bottom: -3px;" data-i18n="esper-mastery-u">ESPER MASTERY</span>
+              </div>
+            </div>
+          </div>
           <div class="col col2">
             <div class="tp" style="margin-top: 10px;">
               <div class="top"><span data-i18n="tp-max-u">Talent Point Maximum</span>
