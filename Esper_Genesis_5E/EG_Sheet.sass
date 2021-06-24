@@ -7079,25 +7079,59 @@ div.sheet-charmancer
 .sheet-spells
   .sheet-spell-meta
     display: grid
-    grid-template-columns: 100px 1fr 240px
+    grid-template-columns: 100px 240px 1fr
     column-gap: 10px
+    margin-bottom: 20px
     .sheet-tp
       margin-top: 10px
       width: 100%
       box-sizing: border-box
       padding: 5px
+      margin-top: 25px!important
       input
         width: 100%
         box-sizing: border-box
     .sheet-esper-mastery .sheet-column
       width: 37px
     .sheet-spell-meta-slots-table
+      input
+        border: 0
+        border-radius: 0
+        width: 100%
+        box-sizing: border-box
+        text-align: center
+        height: 26px
+        margin: 0
+        -moz-appearance:textfield
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+        
+      .sheet-spell-meta-slots-table-header
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-column-gap: 10px
+        margin-top: 5px
+        margin-bottom: 2px
+        > span
+          text-transform: uppercase
+          text-align: left
+        label
+          display: grid
+          grid-template-columns: 1fr 50px
+          grid-column-gap: 5px
+          span
+            text-align: right
+          input
+            padding: 0
+            height: auto
       .sheet-spell-meta-slots-table-data
         display: grid
         grid-template-columns: repeat(9, 1fr)
         grid-gap: 1px
-        background: rgb(104, 89, 61)
-        border: 1px solid rgb(104, 89, 61)
+        background: #ab8b57
+        border: 1px solid #ab8b57
         border-radius: 5px
         overflow: hidden
         span
@@ -7114,16 +7148,3 @@ div.sheet-charmancer
             content: "st"
           &:nth-child(3):after
             content: "nd"
-        input
-          border: 0
-          border-radius: 0
-          width: 100%
-          box-sizing: border-box
-          text-align: center
-          height: 26px
-          margin: 0
-          -moz-appearance:textfield
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button
-          -webkit-appearance: none
-          margin: 0

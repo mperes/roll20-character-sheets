@@ -1718,29 +1718,6 @@
                 <input type="number" name="attr_tp" title="@{tp}"/><span class="label" data-i18n="tp-current-u" style="margin-top: 5px;">TALENT POINTS REMAINING</span>
               </div>
             </div>
-            <div class="spell-meta-slots">
-              <div class="spell-meta-slots-table">
-                <div class="spell-meta-slots-table-header"><span data-i18n="tech-slots"></span><span data-i18n="techniques-prepared"></span></div>
-                <div class="spell-meta-slots-table-data"><span class="header" data-i18n="slots"></span><span class="header">1</span><span class="header">2</span><span class="header">3</span><span class="header">4</span><span class="header">5</span><span class="header">6</span><span class="header">7</span><span class="header">8</span><span data-i18n="slots-max"></span>
-                  <input type="number" name="attr_lvl1_slots_total"/>
-                  <input type="number" name="attr_lvl2_slots_total"/>
-                  <input type="number" name="attr_lvl3_slots_total"/>
-                  <input type="number" name="attr_lvl4_slots_total"/>
-                  <input type="number" name="attr_lvl5_slots_total"/>
-                  <input type="number" name="attr_lvl6_slots_total"/>
-                  <input type="number" name="attr_lvl7_slots_total"/>
-                  <input type="number" name="attr_lvl8_slots_total"/><span data-i18n="slots-used"></span>
-                  <input type="number" name="attr_lvl1_slots_expended"/>
-                  <input type="number" name="attr_lvl2_slots_expended"/>
-                  <input type="number" name="attr_lvl3_slots_expended"/>
-                  <input type="number" name="attr_lvl4_slots_expended"/>
-                  <input type="number" name="attr_lvl5_slots_expended"/>
-                  <input type="number" name="attr_lvl6_slots_expended"/>
-                  <input type="number" name="attr_lvl7_slots_expended"/>
-                  <input type="number" name="attr_lvl8_slots_expended"/>
-                </div>
-              </div>
-            </div>
             <div class="spell-meta-mastery">
               <div class="tp-slots"><span class="label" data-i18n="talent-slots-label" style="margin-bottom: 3px; margin-top: 10px;">TALENT SLOTS (Cybermancer)</span>
                 <div class="hdice-dsaves-container" style="width: 242px;">
@@ -1785,57 +1762,32 @@
                 </div><span class="label" style="margin-top: 8px; margin-bottom: -3px;" data-i18n="esper-mastery-u">ESPER MASTERY</span>
               </div>
             </div>
-          </div>
-          <div class="col col2">
-            <div class="tp" style="margin-top: 10px;">
-              <div class="top"><span data-i18n="tp-max-u">Talent Point Maximum</span>
-                <input type="text" name="attr_tp_max" title="@{tp_max}"/>
-              </div>
-              <input type="number" name="attr_tp" title="@{tp}"/><span class="label" data-i18n="tp-current-u" style="margin-top: 5px;">TALENT POINTS REMAINING</span>
-            </div>
-          </div>
-          <div class="col col2"><span class="label" data-i18n="talent-slots-label" style="margin-bottom: 3px; margin-top: 10px;">TALENT SLOTS (Cybermancer)</span>
-            <div class="hdice-dsaves-container" style="width: 242px;">
-              <div class="subcontainer">
-                <div class="top"><span data-i18n="max-rank-u">Rank</span>
-                  <input type="text" name="attr_slot_rank_max" title="@{slot_rank_max}"/>
+            <div class="spell-meta-slots">
+              <div class="spell-meta-slots-table">
+                <div class="spell-meta-slots-table-header"><span data-i18n="tech-slots"></span>
+                  <label><span data-i18n="techniques-prepared"></span>
+                    <input type="number" name="techniques_prepared"/>
+                  </label>
                 </div>
-                <input type="number" name="attr_slots_max" title="@{talent_slots}" style="margin-bottom: -6px;"/><span class="label" data-i18n="talent-slots-u" style="margin-top: 6px;">Max Talent Slots</span>
-              </div>
-              <div class="subcontainer">
-                <div class="speed">
-                  <input type="number" name="attr_slots_used" title="@{slots_used}" style="margin-top: 20px;"/><span class="label" data-i18n="used-talent-slots" style="margin-top: 2px;">Slots Remaining</span>
+                <div class="spell-meta-slots-table-data"><span class="header" data-i18n="slots"></span><span class="header">1</span><span class="header">2</span><span class="header">3</span><span class="header">4</span><span class="header">5</span><span class="header">6</span><span class="header">7</span><span class="header">8</span><span data-i18n="slots-max"></span>
+                  <input type="number" name="attr_lvl1_slots_total"/>
+                  <input type="number" name="attr_lvl2_slots_total"/>
+                  <input type="number" name="attr_lvl3_slots_total"/>
+                  <input type="number" name="attr_lvl4_slots_total"/>
+                  <input type="number" name="attr_lvl5_slots_total"/>
+                  <input type="number" name="attr_lvl6_slots_total"/>
+                  <input type="number" name="attr_lvl7_slots_total"/>
+                  <input type="number" name="attr_lvl8_slots_total"/><span data-i18n="slots-used"></span>
+                  <input type="number" name="attr_lvl1_slots_expended"/>
+                  <input type="number" name="attr_lvl2_slots_expended"/>
+                  <input type="number" name="attr_lvl3_slots_expended"/>
+                  <input type="number" name="attr_lvl4_slots_expended"/>
+                  <input type="number" name="attr_lvl5_slots_expended"/>
+                  <input type="number" name="attr_lvl6_slots_expended"/>
+                  <input type="number" name="attr_lvl7_slots_expended"/>
+                  <input type="number" name="attr_lvl8_slots_expended"/>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col col3">
-            <div class="class_options esper-mastery" style="margin-top: 10px;">
-              <div class="column"><span class="em_blank">&nbsp;</span><span data-i18n="em_available">Gained?</span><span data-i18n="em_used">Used</span></div>
-              <div class="column"><span data="em_rank">6th</span>
-                <div class="sub-button">
-                  <input type="checkbox" name="attr_mastery_6th" value="1"/>
-                </div>
-                <input type="checkbox" name="attr_mastery_6th_used" value="1"/>
-              </div>
-              <div class="column"><span data="em_rank">7th</span>
-                <div class="sub-button">
-                  <input type="checkbox" name="attr_mastery_7th" value="1"/>
-                </div>
-                <input type="checkbox" name="attr_mastery_7th_used" value="1"/>
-              </div>
-              <div class="column"><span data="em_rank">8th</span>
-                <div class="sub-button">
-                  <input type="checkbox" name="attr_mastery_8th" value="1"/>
-                </div>
-                <input type="checkbox" name="attr_mastery_8th_used" value="1"/>
-              </div>
-              <div class="column"><span data="em_rank">9th</span>
-                <div class="sub-button">
-                  <input type="checkbox" name="attr_mastery_9th" value="1"/>
-                </div>
-                <input type="checkbox" name="attr_mastery_9th_used" value="1"/>
-              </div><span class="label" style="margin-top: 8px; margin-bottom: -3px;" data-i18n="esper-mastery-u">ESPER MASTERY</span>
             </div>
           </div>
           <div class="col col-full">
@@ -19682,8 +19634,8 @@ var update_spell_slots = function() {
       const casterType = [1, 1/2];
       let casterLevel = 0;
       if(v["class"] && allowedClasses.indexOf(v["class"]) > -1) {
-        const lvl = v["base_level"] && !isNaN(parseInt(v["base_level"], 10)) ? parseInt(v["base_level"], 10) : 0;
-        if(lvl > 0) lvl = lvl * casterType[allowedClasses.indexOf(v["class"])];
+        let lvl = v["base_level"] && !isNaN(parseInt(v["base_level"], 10)) ? parseInt(v["base_level"], 10) : 0;
+        if(lvl > 0) lvl = Math.floor(lvl * casterType[allowedClasses.indexOf(v["class"])]);
         casterLevel += lvl;
       }
       for(let i=1; i<=3; i++) {
@@ -19692,8 +19644,8 @@ var update_spell_slots = function() {
           v[`multiclass${i}`] && allowedClasses.indexOf(v[`multiclass${i}`]) > -1
         )
         {
-          const lvl = v[`multiclass${i}_lvl`] && !isNaN(parseInt(v[`multiclass${i}_lvl`], 10)) ? parseInt(v[`multiclass${i}_lvl`], 10) : 0;
-          if(lvl > 0) lvl = lvl * casterType[allowedClasses.indexOf(v[`multiclass${i}`])];
+          let lvl = v[`multiclass${i}_lvl`] && !isNaN(parseInt(v[`multiclass${i}_lvl`], 10)) ? parseInt(v[`multiclass${i}_lvl`], 10) : 0;
+          if(lvl > 0) lvl = Math.floor(lvl * casterType[allowedClasses.indexOf(v[`multiclass${i}`])]);
           casterLevel += lvl;
         }
       }
@@ -19732,44 +19684,6 @@ var update_spell_slots = function() {
       update["lvl9_slots_total"] = l9;
       setAttrs(update, {silent: true});
   });
-};
-
-var update_spell_slots_old = function() {
-    getAttrs(["lvl1_slots_mod","lvl2_slots_mod","lvl3_slots_mod","lvl4_slots_mod","lvl5_slots_mod","lvl6_slots_mod","lvl7_slots_mod","lvl8_slots_mod","lvl9_slots_mod","caster_level"], function(v) {
-        var update = {};
-        var lvl = v["caster_level"] && !isNaN(parseInt(v["caster_level"], 10)) ? parseInt(v["caster_level"], 10) : 0;
-        var l1 = v["lvl1_slots_mod"] && !isNaN(parseInt(v["lvl1_slots_mod"], 10)) ? parseInt(v["lvl1_slots_mod"], 10) : 0;
-        var l2 = v["lvl2_slots_mod"] && !isNaN(parseInt(v["lvl2_slots_mod"], 10)) ? parseInt(v["lvl2_slots_mod"], 10) : 0;
-        var l3 = v["lvl3_slots_mod"] && !isNaN(parseInt(v["lvl3_slots_mod"], 10)) ? parseInt(v["lvl3_slots_mod"], 10) : 0;
-        var l4 = v["lvl4_slots_mod"] && !isNaN(parseInt(v["lvl4_slots_mod"], 10)) ? parseInt(v["lvl4_slots_mod"], 10) : 0;
-        var l5 = v["lvl5_slots_mod"] && !isNaN(parseInt(v["lvl5_slots_mod"], 10)) ? parseInt(v["lvl5_slots_mod"], 10) : 0;
-        var l6 = v["lvl6_slots_mod"] && !isNaN(parseInt(v["lvl6_slots_mod"], 10)) ? parseInt(v["lvl6_slots_mod"], 10) : 0;
-        var l7 = v["lvl7_slots_mod"] && !isNaN(parseInt(v["lvl7_slots_mod"], 10)) ? parseInt(v["lvl7_slots_mod"], 10) : 0;
-        var l8 = v["lvl8_slots_mod"] && !isNaN(parseInt(v["lvl8_slots_mod"], 10)) ? parseInt(v["lvl8_slots_mod"], 10) : 0;
-        var l9 = v["lvl9_slots_mod"] && !isNaN(parseInt(v["lvl9_slots_mod"], 10)) ? parseInt(v["lvl9_slots_mod"], 10) : 0;
-        if(lvl > 0) {
-            l1 = l1 + Math.min((lvl + 1),4);
-            if(lvl < 3) {l2 = l2 + 0;} else if(lvl === 3) {l2 = l2 + 2;} else {l2 = l2 + 3;};
-            if(lvl < 5) {l3 = l3 + 0;} else if(lvl === 5) {l3 = l3 + 2;} else {l3 = l3 + 3;};
-            if(lvl < 7) {l4 = l4 + 0;} else if(lvl === 7) {l4 = l4 + 1;} else if(lvl === 8) {l4 = l4 + 2;} else {l4 = l4 + 3;};
-            if(lvl < 9) {l5 = l5 + 0;} else if(lvl === 9) {l5 = l5 + 1;} else if(lvl < 18) {l5 = l5 + 2;} else {l5 = l5 + 3;};
-            if(lvl < 11) {l6 = l6 + 0;} else if(lvl < 19) {l6 = l6 + 1;} else {l6 = l6 + 2;};
-            if(lvl < 13) {l7 = l7 + 0;} else if(lvl < 20) {l7 = l7 + 1;} else {l7 = l7 + 2;};
-            if(lvl < 15) {l8 = l8 + 0;} else {l8 = l8 + 1;};
-            if(lvl < 17) {l9 = l9 + 0;} else {l9 = l9 + 1;};
-        };
-
-        update["lvl1_slots_total"] = l1;
-        update["lvl2_slots_total"] = l2;
-        update["lvl3_slots_total"] = l3;
-        update["lvl4_slots_total"] = l4;
-        update["lvl5_slots_total"] = l5;
-        update["lvl6_slots_total"] = l6;
-        update["lvl7_slots_total"] = l7;
-        update["lvl8_slots_total"] = l8;
-        update["lvl9_slots_total"] = l9;
-        setAttrs(update, {silent: true});
-    });
 };
 
 var update_pb = function() {
