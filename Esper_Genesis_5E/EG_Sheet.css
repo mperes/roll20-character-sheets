@@ -7138,7 +7138,8 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-summary
 
 .sheet-spells .sheet-spell-meta {
   display: grid;
-  grid-template-columns: 140px 1fr 240px;
+  grid-template-columns: 100px 1fr 240px;
+  column-gap: 10px;
 }
 .sheet-spells .sheet-spell-meta .sheet-tp {
   margin-top: 10px;
@@ -7152,4 +7153,47 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-summary
 }
 .sheet-spells .sheet-spell-meta .sheet-esper-mastery .sheet-column {
   width: 37px;
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-gap: 1px;
+  background: #68593d;
+  border: 1px solid #68593d;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data span {
+  margin: 0;
+  background: white;
+  line-height: 26px;
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data .sheet-header {
+  background: #e2c285;
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data .sheet-header:after {
+  content: "th";
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data .sheet-header:first-child:after {
+  content: none;
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data .sheet-header:nth-child(2):after {
+  content: "st";
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data .sheet-header:nth-child(3):after {
+  content: "nd";
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data input {
+  border: 0;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  height: 26px;
+  margin: 0;
+}
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data input[type=number]::-webkit-outer-spin-button,
+.sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

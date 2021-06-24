@@ -2464,6 +2464,64 @@ var update_leveler_display = function () {
 };
 
 var update_spell_slots = function() {
+  getAttrs(["class", "base_level","multiclass1_flag","multiclass2_flag","multiclass3_flag","multiclass1_lvl","multiclass2_lvl","multiclass3_lvl","multiclass1","multiclass2","multiclass3", "lvl1_slots_mod","lvl2_slots_mod","lvl3_slots_mod","lvl4_slots_mod","lvl5_slots_mod","lvl6_slots_mod","lvl7_slots_mod","lvl8_slots_mod","lvl9_slots_mod","caster_level"], function(v) {
+      const allowedClasses = ["Engineer", "Sentinel"];
+      const casterType = [1, 1/2];
+      let casterLevel = 0;
+      if(v["class"] && allowedClasses.indexOf(v["class"]) > -1) {
+        const lvl = v["base_level"] && !isNaN(parseInt(v["base_level"], 10)) ? parseInt(v["base_level"], 10) : 0;
+        if(lvl > 0) lvl = lvl * casterType[allowedClasses.indexOf(v["class"])];
+        casterLevel += lvl;
+      }
+      for(let i=1; i<=3; i++) {
+        if(
+          v[`multiclass${i}_flag`] === "1" &&
+          v[`multiclass${i}`] && allowedClasses.indexOf(v[`multiclass${i}`]) > -1
+        )
+        {
+          const lvl = v[`multiclass${i}_lvl`] && !isNaN(parseInt(v[`multiclass${i}_lvl`], 10)) ? parseInt(v[`multiclass${i}_lvl`], 10) : 0;
+          if(lvl > 0) lvl = lvl * casterType[allowedClasses.indexOf(v[`multiclass${i}`])];
+          casterLevel += lvl;
+        }
+      }
+
+      var update = {};
+      var lvl = casterLevel;
+      var l1 = v["lvl1_slots_mod"] && !isNaN(parseInt(v["lvl1_slots_mod"], 10)) ? parseInt(v["lvl1_slots_mod"], 10) : 0;
+      var l2 = v["lvl2_slots_mod"] && !isNaN(parseInt(v["lvl2_slots_mod"], 10)) ? parseInt(v["lvl2_slots_mod"], 10) : 0;
+      var l3 = v["lvl3_slots_mod"] && !isNaN(parseInt(v["lvl3_slots_mod"], 10)) ? parseInt(v["lvl3_slots_mod"], 10) : 0;
+      var l4 = v["lvl4_slots_mod"] && !isNaN(parseInt(v["lvl4_slots_mod"], 10)) ? parseInt(v["lvl4_slots_mod"], 10) : 0;
+      var l5 = v["lvl5_slots_mod"] && !isNaN(parseInt(v["lvl5_slots_mod"], 10)) ? parseInt(v["lvl5_slots_mod"], 10) : 0;
+      var l6 = v["lvl6_slots_mod"] && !isNaN(parseInt(v["lvl6_slots_mod"], 10)) ? parseInt(v["lvl6_slots_mod"], 10) : 0;
+      var l7 = v["lvl7_slots_mod"] && !isNaN(parseInt(v["lvl7_slots_mod"], 10)) ? parseInt(v["lvl7_slots_mod"], 10) : 0;
+      var l8 = v["lvl8_slots_mod"] && !isNaN(parseInt(v["lvl8_slots_mod"], 10)) ? parseInt(v["lvl8_slots_mod"], 10) : 0;
+      var l9 = v["lvl9_slots_mod"] && !isNaN(parseInt(v["lvl9_slots_mod"], 10)) ? parseInt(v["lvl9_slots_mod"], 10) : 0;
+      if(lvl > 0) {
+          l1 = l1 + Math.min((lvl + 1),4);
+          if(lvl < 3) {l2 = l2 + 0;} else if(lvl === 3) {l2 = l2 + 2;} else {l2 = l2 + 3;};
+          if(lvl < 5) {l3 = l3 + 0;} else if(lvl === 5) {l3 = l3 + 2;} else {l3 = l3 + 3;};
+          if(lvl < 7) {l4 = l4 + 0;} else if(lvl === 7) {l4 = l4 + 1;} else if(lvl === 8) {l4 = l4 + 2;} else {l4 = l4 + 3;};
+          if(lvl < 9) {l5 = l5 + 0;} else if(lvl === 9) {l5 = l5 + 1;} else if(lvl < 18) {l5 = l5 + 2;} else {l5 = l5 + 3;};
+          if(lvl < 11) {l6 = l6 + 0;} else if(lvl < 19) {l6 = l6 + 1;} else {l6 = l6 + 2;};
+          if(lvl < 13) {l7 = l7 + 0;} else if(lvl < 20) {l7 = l7 + 1;} else {l7 = l7 + 2;};
+          if(lvl < 15) {l8 = l8 + 0;} else {l8 = l8 + 1;};
+          if(lvl < 17) {l9 = l9 + 0;} else {l9 = l9 + 1;};
+      };
+
+      update["lvl1_slots_total"] = l1;
+      update["lvl2_slots_total"] = l2;
+      update["lvl3_slots_total"] = l3;
+      update["lvl4_slots_total"] = l4;
+      update["lvl5_slots_total"] = l5;
+      update["lvl6_slots_total"] = l6;
+      update["lvl7_slots_total"] = l7;
+      update["lvl8_slots_total"] = l8;
+      update["lvl9_slots_total"] = l9;
+      setAttrs(update, {silent: true});
+  });
+};
+
+var update_spell_slots_old = function() {
     getAttrs(["lvl1_slots_mod","lvl2_slots_mod","lvl3_slots_mod","lvl4_slots_mod","lvl5_slots_mod","lvl6_slots_mod","lvl7_slots_mod","lvl8_slots_mod","lvl9_slots_mod","caster_level"], function(v) {
         var update = {};
         var lvl = v["caster_level"] && !isNaN(parseInt(v["caster_level"], 10)) ? parseInt(v["caster_level"], 10) : 0;

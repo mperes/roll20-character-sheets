@@ -7079,8 +7079,8 @@ div.sheet-charmancer
 .sheet-spells
   .sheet-spell-meta
     display: grid
-    grid-template-columns: 140px 1fr 240px
-
+    grid-template-columns: 100px 1fr 240px
+    column-gap: 10px
     .sheet-tp
       margin-top: 10px
       width: 100%
@@ -7091,5 +7091,39 @@ div.sheet-charmancer
         box-sizing: border-box
     .sheet-esper-mastery .sheet-column
       width: 37px
-
-      
+    .sheet-spell-meta-slots-table
+      .sheet-spell-meta-slots-table-data
+        display: grid
+        grid-template-columns: repeat(9, 1fr)
+        grid-gap: 1px
+        background: rgb(104, 89, 61)
+        border: 1px solid rgb(104, 89, 61)
+        border-radius: 5px
+        overflow: hidden
+        span
+          margin: 0
+          background: white
+          line-height: 26px
+        .sheet-header
+          background: #e2c285
+          &:after
+            content: "th"
+          &:first-child:after
+            content: none
+          &:nth-child(2):after
+            content: "st"
+          &:nth-child(3):after
+            content: "nd"
+        input
+          border: 0
+          border-radius: 0
+          width: 100%
+          box-sizing: border-box
+          text-align: center
+          height: 26px
+          margin: 0
+          -moz-appearance:textfield
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button
+          -webkit-appearance: none
+          margin: 0
