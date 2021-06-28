@@ -7222,3 +7222,7 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-summary
 .sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data .sheet-header:nth-child(3):after {
   content: "nd";
 }
+
+.charsheet .sheet-charmancer .sheet-no_spells + .sheet-spell_holder .sheet-row p {
+  text-transform: capitalize;
+}
