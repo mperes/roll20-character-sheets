@@ -876,13 +876,13 @@ span(data-i18n='starship-u') STARSHIP
               input(type="number" name="techniques_prepared")
           .spell-meta-slots-table-data
             span.header(data-i18n="slots")
-            each _, i in Array(8)
+            each _, i in Array(9)
               span.header #{i+1}
             span(data-i18n="slots-max")
-            each _, i in Array(8)
+            each _, i in Array(9)
               input(type="number" name=`attr_lvl${i+1}_slots_total`)
             span(data-i18n="slots-used")
-            each _, i in Array(8)
+            each _, i in Array(9)
               input(type="number" name=`attr_lvl${i+1}_slots_expended`)
 
     .col.col-full

@@ -7195,7 +7195,7 @@ div.sheet-charmancer div.sheet-licensedsheet-flag:not(:empty) ~ * .sheet-summary
 }
 .sheet-spells .sheet-spell-meta .sheet-spell-meta-slots-table .sheet-spell-meta-slots-table-data {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
+  grid-template-columns: repeat(10, 1fr);
   grid-gap: 1px;
   background: #ab8b57;
   border: 1px solid #ab8b57;
