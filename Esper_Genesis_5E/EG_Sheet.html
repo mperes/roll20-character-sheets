@@ -12943,7 +12943,7 @@ var processDrop = function(page, currentData, repeating, looped) {
                         var repupdate = {};
                         var knownspells = [];
                         var toset = {};
-                        repupdate[rowid + " label span"] = level == 0 ? titles[section] + " Cantrips" : titles[section] + " Level " + level;
+                        repupdate[rowid + " label span"] = level == 0 ? titles[section] + " Prime Talents" : titles[section] + " Level " + level;
                         _.each(spells.known, function(spell, index) {
                             var thisSpell = spell;
                             thisSpell += "<button type=\"action\" class=\"choice action mancer_info\" name=\"act_" + rowid + "_known" + index + "\">i</button>";
@@ -15676,7 +15676,7 @@ var processDrop = function(page, currentData, repeating, looped) {
             setAttrs(toSet);
             var update = {};
             update["spells-summary"] = "";
-            if(newcantrips != 0 || knowncantrips != 0) update["spells-summary"] = "<div class=\"level_0\"><div class=\"title\">Cantrips: </div><div class=\"list\"></div></div>";
+            if(newcantrips != 0 || knowncantrips != 0) update["spells-summary"] = "<div class=\"level_0\"><div class=\"title\">Prime Talents: </div><div class=\"list\"></div></div>";
             _.times(spellmaxlevel, function(x) {
                 update["spells-summary"] += "<div class=\"level_" + (x + 1) + "\"><div class=\"title\">Level " + (x + 1) + ": </div><div class=\"list\"></div></div>";
             });
@@ -15684,7 +15684,7 @@ var processDrop = function(page, currentData, repeating, looped) {
                 update["cantripinfo"] = "";
                 _.each(classes, function(thisclass) {
                     if(thisclass.newspells) {
-                        update["cantripinfo"] += "<p>You can add " + thisclass.newcantrips + " " + thisclass.class + " cantrips.</p>";
+                        update["cantripinfo"] += "<p>You can add " + thisclass.newcantrips + " " + thisclass.class + " Prime Talents.</p>";
                     }
                 });
             }
@@ -15799,7 +15799,7 @@ var processDrop = function(page, currentData, repeating, looped) {
                     } else {
                         update[levelrow + " .sheet-spellinfo"] = "";
                     }
-                    update[levelrow + " label .sheet-title"] = x == "0" ? "Cantrips" : "Level " + x;
+                    update[levelrow + " label .sheet-title"] = x == "0" ? "Prime Talents" : "Level " + x;
                     update[levelrow + " label .sheet-title"] += "<span class=\"choice\">r</span>"
                     if(x == "0" && newcantrips == 0) {
                         toSet[levelrow + "_show"] = "1";

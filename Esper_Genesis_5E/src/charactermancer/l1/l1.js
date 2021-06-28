@@ -2567,7 +2567,7 @@
                         var repupdate = {};
                         var knownspells = [];
                         var toset = {};
-                        repupdate[rowid + " label span"] = level == 0 ? titles[section] + " Cantrips" : titles[section] + " Level " + level;
+                        repupdate[rowid + " label span"] = level == 0 ? titles[section] + " Prime Talents" : titles[section] + " Level " + level;
                         _.each(spells.known, function(spell, index) {
                             var thisSpell = spell;
                             thisSpell += "<button type=\"action\" class=\"choice action mancer_info\" name=\"act_" + rowid + "_known" + index + "\">i</button>";

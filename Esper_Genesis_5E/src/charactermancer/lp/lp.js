@@ -1467,7 +1467,7 @@
             setAttrs(toSet);
             var update = {};
             update["spells-summary"] = "";
-            if(newcantrips != 0 || knowncantrips != 0) update["spells-summary"] = "<div class=\"level_0\"><div class=\"title\">Cantrips: </div><div class=\"list\"></div></div>";
+            if(newcantrips != 0 || knowncantrips != 0) update["spells-summary"] = "<div class=\"level_0\"><div class=\"title\">Prime Talents: </div><div class=\"list\"></div></div>";
             _.times(spellmaxlevel, function(x) {
                 update["spells-summary"] += "<div class=\"level_" + (x + 1) + "\"><div class=\"title\">Level " + (x + 1) + ": </div><div class=\"list\"></div></div>";
             });
@@ -1475,7 +1475,7 @@
                 update["cantripinfo"] = "";
                 _.each(classes, function(thisclass) {
                     if(thisclass.newspells) {
-                        update["cantripinfo"] += "<p>You can add " + thisclass.newcantrips + " " + thisclass.class + " cantrips.</p>";
+                        update["cantripinfo"] += "<p>You can add " + thisclass.newcantrips + " " + thisclass.class + " Prime Talents.</p>";
                     }
                 });
             }
@@ -1590,7 +1590,7 @@
                     } else {
                         update[levelrow + " .sheet-spellinfo"] = "";
                     }
-                    update[levelrow + " label .sheet-title"] = x == "0" ? "Cantrips" : "Level " + x;
+                    update[levelrow + " label .sheet-title"] = x == "0" ? "Prime Talents" : "Level " + x;
                     update[levelrow + " label .sheet-title"] += "<span class=\"choice\">r</span>"
                     if(x == "0" && newcantrips == 0) {
                         toSet[levelrow + "_show"] = "1";
