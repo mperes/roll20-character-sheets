@@ -2466,7 +2466,7 @@ var update_leveler_display = function () {
 var update_spell_slots = function() {
   getAttrs(["class", "base_level","multiclass1_flag","multiclass2_flag","multiclass3_flag","multiclass1_lvl","multiclass2_lvl","multiclass3_lvl","multiclass1","multiclass2","multiclass3", "lvl1_slots_mod","lvl2_slots_mod","lvl3_slots_mod","lvl4_slots_mod","lvl5_slots_mod","lvl6_slots_mod","lvl7_slots_mod","lvl8_slots_mod","lvl9_slots_mod","caster_level"], function(v) {
       const allowedClasses = ["Engineer", "Hunter", "Sentinel"];
-      const casterType = [1, 1/2];
+      const casterType = [1, 1/2, 1/2];
       let multiClass = false;
       if(v["class"] && allowedClasses.indexOf(v["class"]) > -1) {
         for(let i=1; i<=3; i++) {
@@ -2480,8 +2480,10 @@ var update_spell_slots = function() {
       }
       const roundingFunction = (!multiClass) ? Math.ceil : Math.floor;
       let casterLevel = 0;
+      let characterLevel = 0;
       if(v["class"] && allowedClasses.indexOf(v["class"]) > -1) {
         let lvl = v["base_level"] && !isNaN(parseInt(v["base_level"], 10)) ? parseInt(v["base_level"], 10) : 0;
+        characterLevel += lvl;
         if(lvl > 0) lvl = roundingFunction(lvl * casterType[allowedClasses.indexOf(v["class"])]);
         casterLevel += lvl;
       }
@@ -2492,12 +2494,13 @@ var update_spell_slots = function() {
         )
         {
           let lvl = v[`multiclass${i}_lvl`] && !isNaN(parseInt(v[`multiclass${i}_lvl`], 10)) ? parseInt(v[`multiclass${i}_lvl`], 10) : 0;
+          characterLevel += lvl;
           if(lvl > 0) lvl = Math.floor(lvl * casterType[allowedClasses.indexOf(v[`multiclass${i}`])]);
           casterLevel += lvl;
         }
       }
 
-      if(!multiClass && casterLevel === 1 && ["Hunter", "Sentinel"].indexOf(v["class"]) > -1) casterLevel = 0;
+      if(!multiClass && characterLevel === 1 && ["Hunter", "Sentinel"].indexOf(v["class"]) > -1) casterLevel = 0;
 
       var update = {};
       var lvl = casterLevel;
